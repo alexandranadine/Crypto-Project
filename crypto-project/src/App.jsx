@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./App.css";
+import Solana from "./assets/solanaLogo.svg";
 
 function App() {
   const [coins, setCoins] = useState([]);
@@ -18,24 +19,25 @@ function App() {
 
   return (
     <>
+      <img className="header" src={Solana} />
       <h1>Solana Ecosystem Coin Prices</h1>
       {loading ? (
         <p>Loading...</p>
       ) : (
-        <table style={{ width: "100%", borderCollapse: "collapse" }}>
+        <table>
           <thead>
             <tr>
-              <th style={{ borderBottom: "10px solid #ccc", textAlign: "center", padding: "8px", borderBottomColor: "black" }}>Name</th>
-              <th style={{ borderBottom: "10px solid #ccc", textAlign: "left", padding: "8px", borderBottomColor: "black" }}>Price (USD)</th>
-              <th style={{ borderBottom: "10px solid #ccc", textAlign: "left", padding: "8px", borderBottomColor: "black" }}>Market Cap (USD)</th>
+              <th>Name</th>
+              <th>Price (USD)</th>
+              <th>Market Cap (USD)</th>
             </tr>
           </thead>
           <tbody>
             {coins.map((coin) => (
               <tr key={coin.id}>
-                <td style={{ padding: "8px" }}>{coin.name}</td>
-                <td style={{ padding: "8px" }}>${coin.current_price}</td>
-                <td style={{ padding: "8px" }}>${coin.market_cap.toLocaleString()}</td>
+                <td>{coin.name}</td>
+                <td>${coin.current_price}</td>
+                <td>${coin.market_cap.toLocaleString()}</td>
               </tr>
             ))}
           </tbody>
