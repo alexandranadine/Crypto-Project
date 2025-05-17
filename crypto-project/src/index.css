@@ -19,9 +19,41 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-image: linear-gradient(
+    to bottom,
+    #9945ff,
+    #0097ff,
+    #00c2ff,
+    #00dede,
+    #14f195
+  );
+
+  color: black;
 }
 
 h1 {
   font-size: 2em;
   line-height: 1.1;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+}
+
+table {
+  color: #000;
+  background-color: #f7f7f7;
+  border-radius: 1.5rem;
+  filter: drop-shadow(2px 5px 18px #0000002f);
+}
+
+th {
+  border-bottom: 1px solid #d4d4d4;
+  padding: 1rem;
+  text-align: left;
+}
+
+td {
+  font-size: 1.2em;
+  padding: 0.5rem 1rem;
 }
