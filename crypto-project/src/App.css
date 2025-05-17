@@ -16,3 +16,11 @@ p {
 ul {
   color: black;
 }
+
+table {
+  color: black;
+}
+
+td {
+  font-size: 1.2em;
+}
